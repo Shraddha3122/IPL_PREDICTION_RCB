@@ -1,0 +1,71 @@
+
+API:-
+
+
+
+Q.1) Predict whether RCB will win or lose a match based on toss result, venue, and opposition.
+
+Q.2) Predict RCB’s match outcome based on first-innings total and powerplay score.
+
+Q.3) Predict whether RCB should bat or bowl first based on past win/loss data at a specific venue
+
+Q.4) Predict whether RCB will win a match if they score below 160 in the first innings.
+
+Q. 5) Predict the most probable player of the match from RCB based on performance trends.
+
+Q. 6) Predict whether RCB will qualify for the playoffs based on their performance in the first 7 matches of a season.
+
+Q.. 7) Predict RCB’s expected score at Chinnaswamy Stadium based on past performances.
+
+Q.8) Predict the impact of toss result on RCB’s match-winning probability in away games.
+
+Q.9) Predict RCB’s highest run-scorer in a match based on past trends against a specific opponent. 
+
+
+
+
+1) /predict/score
+   METHOD: POST
+   URL: http://127.0.0.1:5000/predict/score
+
+   REQUEST:-
+   {
+       "venue": "M. Chinnaswamy Stadium",
+       "team1": "Royal Challengers Bangalore",
+       "team2": "Mumbai Indians"
+   }
+
+   RESPONSE:-
+   {
+       "predicted_score": 170
+   }
+
+--------------------------------------------------------
+
+2) /predict/win
+   METHOD: POST
+   URL: http://127.0.0.1:5000/predict/win
+
+   REQUEST:-
+   {
+       "venue": "M. Chinnaswamy Stadium",
+       "toss_decision": "bat",
+       "team1": "Royal Challengers Bangalore",
+       "team2": "Mumbai Indians"
+   }
+
+   RESPONSE:-
+   {
+       "win_probability": 0.72
+   }
+
+--------------------------------------------------------
+
+3) /health
+   METHOD: GET
+   URL: http://127.0.0.1:5000/health
+
+   RESPONSE:-
+   {
+       "status": "API is running successfully"
+   }
